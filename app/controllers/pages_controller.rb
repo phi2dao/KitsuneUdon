@@ -24,7 +24,7 @@ class PagesController < ApplicationController
 					@title = "Home"
 					render 'home'
 				else
-					times = params[:data][:times].to_s
+					times = params[:data][:times].to_i
 				end
 				times.times { @output << result.result.generate }
 			else
