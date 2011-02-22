@@ -2,11 +2,11 @@
 <%= form_for :data, :url => output_path do |f| %>
 	<div class="field">
 		<%= f.label "Language file" %><br />
-		<%= f.text_area :source %>
+		<%= f.text_area :source, :value => lang_source %>
 	</div>
 	<div class="field">
 		<%= f.label "Words to generate" %><br />
-		<%= f.text_field :times %>
+		<%= f.text_field :times, :value => lang_times %>
 	</div>
 	<div class="actions">
 		<%= f.submit "Generate" %>
