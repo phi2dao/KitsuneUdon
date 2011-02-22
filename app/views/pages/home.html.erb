@@ -1,2 +1,14 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Kotodama <%= Kotodama::VERSION %></h1>
+<%= form_for :data, :url => output_path do |f| %>
+	<div class="field">
+		<%= f.label :source %><br />
+		<%= f.text_area :source %>
+	</div>
+	<div class="field">
+		<%= f.label :times %><br />
+		<%= f.text_field :times %>
+	</div>
+	<div class="actions">
+		<%= f.submit "Generate" %>
+	</div>
+<% end %>

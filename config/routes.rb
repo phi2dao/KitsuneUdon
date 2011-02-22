@@ -1,4 +1,6 @@
 KitsuneUdon::Application.routes.draw do
+	resources :pages, :only => [:home, :help, :output]
+	
 	match '/home', :to => 'pages#home'
 	get "pages/home"
 	
